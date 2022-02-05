@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:context= "http//www.springflamework.org/schema/context"
+ xmlns:p= "http://www.springflamework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+ 
+ <!--this is our beans  1st->method  -->
+ <bean class="com.springcore.springcore.Student" name="student1">
+ 	<property name="studentID">
+ 		<value>22344</value>
+ 	</property>
+ 	
+ 	<property name="studentName">
+ 		<value>Durgesh Tiwari</value>
+ 	</property>
+ 	
+ 	<property name="studentAddress">
+ 		<value>Delhi</value>
+ 	</property>
+ 	
+ </bean>
+ 
+ 
+ <!--this is 2nd bean  2nd->Method -->
+ <bean class="com.springcore.springcore.Student" name="student2">
+ 	<property name="studentID"  value="22222"></property>
+ 	
+ 	<property name="studentName" value="Divyansh Singh"></property>
+ 	
+ 	<property name="studentAddress"  value="Lucknow"></property>
+ </bean>
+ 
+ <!-- Creating bean using p:schema  3rd method -->
+ <bean class="com.springcore.springcore.Student" name="student3" 
+ 		p:studentID="111" p:studentName="Gaurav Taneja" p:studentAddress="Gorakhpur" />
+ 
+</beans>
